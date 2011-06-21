@@ -5,6 +5,11 @@ require_relative '../lib/euler/problem1'
 
 class Problem1Test < Test::Unit::TestCase
 
+   should "return some stuff" do
+      prb = Euler::Problem1.new
+      assert_equal true, true
+   end
+
 	should "return the sum of all the multiples of 3 or 5 below 10" do
 		prb = Euler::Problem1.new
 		prb.sum_of_multiples_of_3_or_5_below 10
