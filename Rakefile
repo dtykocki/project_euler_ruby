@@ -1,7 +1,7 @@
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 
-task :default => :test
+task :default => :spec
 
-Rake::TestTask.new(:test) do |t|
-   t.test_files = FileList['test/test_*']
+RSpec::Core::RakeTask.new do |t|
+  t.rspec_opts = ["--color", "--format nested"]
 end

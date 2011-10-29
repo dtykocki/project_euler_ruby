@@ -1,14 +1,18 @@
+
 module Euler
-   class Problem1
-      attr_reader :sum
+  class Problem1
 
-      def initialize
-         @sum = 0
-      end
+    def initialize(opts)
+      @limit  = opts[:upto] 
+    end
 
-      def sum_of_multiples_of_3_or_5_below(n)
-         @sum = (1...n).select { |i| i % 3 == 0 || i % 5 == 0 }.inject(0) { |sum, n| sum + n }
-      end
+    def numbers
+      (1..@limit).to_a
+    end
 
-   end
+    def multiple_of?(n)
+      
+    end
+
+  end
 end
