@@ -1,4 +1,3 @@
-
 module Euler
   class Problem1
 
@@ -6,12 +5,9 @@ module Euler
       @limit  = opts[:upto] 
     end
 
-    def numbers
-      (1..@limit).to_a
-    end
-
-    def multiple_of?(n)
-      
+    def run
+      multiples = (1...@limit).find_all { |i| i % 3 == 0 or i % 5 == 0 }
+      multiples.inject(0) { |sum, i| sum += i }
     end
 
   end
